@@ -1,0 +1,9 @@
+<view class="container">
+  <image class="background" src="/images/background.png" mode="aspectFill"></image>
+  <view class="content">
+    <text class="date">{{currentDate}}</text>
+    <text class="sign-in" bindtap="onSignIn">Sign in</text>
+  </view>
+  <view class="daily-question-button" bindtap="onDailyQuestion">Daily Question</view>
+  <view class="ask-question-button" bindtap="onAskQuestion">I will ask questions</view>
+</view>

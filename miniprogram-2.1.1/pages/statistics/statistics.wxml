@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="filters">
+    <view class="date-pickers">
+      <picker mode="date" value="{{startDate}}" start="2021-01-01" end="2023-12-31" bindchange="onStartDateChange">
+        <view class="picker">
+          Start: {{startDate}}
+        </view>
+      </picker>
+      <picker mode="date" value="{{endDate}}" start="2021-01-01" end="2023-12-31" bindchange="onEndDateChange">
+        <view class="picker">
+          End: {{endDate}}
+        </view>
+      </picker>
+    </view>
+    <view class="subject-and-button">
+      <picker bindchange="onSubjectChange" value="{{subjectIndex}}" range="{{subjects}}">
+        <view class="picker subject-picker">
+          Subject: {{subjects[subjectIndex]}}
+        </view>
+      </picker>
+      <button class="confirm-btn" bindtap="onConfirm">Confirm</button>
+    </view>
+  </view>
+  
+  <view class="chart-container">
+    <canvas type="2d" id="answerChart" class="chart"></canvas>
+  </view>
+  
+  <view class="chart-container">
+    <canvas type="2d" id="timeChart" class="chart"></canvas>
+  </view>
+</view>
