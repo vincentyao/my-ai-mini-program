@@ -1,0 +1,8 @@
+<view class="container">
+  <view class="question">{{question}}</view>
+  <view class="options">
+    <view class="option" wx:for="{{options}}" wx:key="index" bindtap="onOptionTap" data-index="{{index}}">
+      {{item}}
+    </view>
+  </view>
+</view>
