@@ -1,0 +1,52 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/daily-question/daily-question",
+    "pages/my/my",
+    "pages/statistics/statistics",
+    "pages/wechat-login/wechat-login",
+    "pages/student-info/student-info",
+    "pages/ask-question/ask-question"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "Learning Assistant",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#1aad19",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "Home",
+        "iconPath": "images/home.png",
+        "selectedIconPath": "images/home_selected.png"
+      },
+      {
+        "pagePath": "pages/my/my",
+        "text": "My",
+        "iconPath": "images/my.png",
+        "selectedIconPath": "images/my_selected.png"
+      },
+      {
+        "pagePath": "pages/statistics/statistics",
+        "text": "Statistics",
+        "iconPath": "images/statistics.png",
+        "selectedIconPath": "images/statistics_selected.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.camera": {
+      "desc": "Your camera will be used to take photos and videos for asking questions."
+    }
+  },
+  "backgroundFetch": {
+    "mode": "periodic",
+    "interval": 1440,
+    "repeat": true
+  }
+}
