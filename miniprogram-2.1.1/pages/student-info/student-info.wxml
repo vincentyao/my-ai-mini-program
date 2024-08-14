@@ -1,0 +1,72 @@
+<view class="container">
+  <scroll-view scroll-y class="form-scroll">
+    <view class="form-top-row">
+      <view class="form-card top-card">
+        <view class="form-label">Education Level <text class="required">*</text></view>
+        <picker bindchange="onEducationLevelChange" value="{{index}}" range="{{educationLevels}}">
+          <view class="picker {{!selectedEducationLevel ? 'picker-placeholder' : ''}}">
+            {{selectedEducationLevel || 'Please select'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-card top-card">
+        <view class="form-label">Province <text class="required">*</text></view>
+        <picker bindchange="onProvinceChange" value="{{index}}" range="{{provinces}}">
+          <view class="picker {{!selectedProvince ? 'picker-placeholder' : ''}}">
+            {{selectedProvince || 'Please select'}}
+          </view>
+        </picker>
+      </view>
+    </view>
+
+    <view class="form-grid">
+      <view class="form-card" wx:if="{{showGrades}}">
+        <view class="form-label">Grade <text class="required">*</text></view>
+        <picker bindchange="onGradeChange" value="{{index}}" range="{{grades[selectedEducationLevel]}}">
+          <view class="picker {{!selectedGrade ? 'picker-placeholder' : ''}}">
+            {{selectedGrade || 'Please select'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-card">
+        <view class="form-label">Textbook Version <text class="required">*</text></view>
+        <picker bindchange="onTextbookVersionChange" value="{{index}}" range="{{textbookVersions}}">
+          <view class="picker {{!selectedTextbookVersion ? 'picker-placeholder' : ''}}">
+            {{selectedTextbookVersion || 'Please select'}}
+          </view>
+        </picker>
+      </view>
+
+      <view class="form-card">
+        <view class="form-label">Nickname <text class="required">*</text></view>
+        <input class="input" placeholder="Enter nickname" bindinput="onNicknameInput" value="{{nickname}}" />
+      </view>
+
+      <view class="form-card">
+        <view class="form-label optional">Real Name</view>
+        <input class="input optional" placeholder="Enter real name (optional)" bindinput="onRealNameInput" value="{{realName}}" />
+      </view>
+
+      <view class="form-card">
+        <view class="form-label optional">Gender</view>
+        <input class="input optional" placeholder="Enter gender (optional)" bindinput="onGenderInput" value="{{gender}}" />
+      </view>
+
+      <view class="form-card">
+        <view class="form-label optional">Age</view>
+        <input class="input optional" placeholder="Enter age (optional)" bindinput="onAgeInput" value="{{age}}" />
+      </view>
+
+      <view class="form-card">
+        <view class="form-label optional">City</view>
+        <input class="input optional" placeholder="Enter city (optional)" bindinput="onCityInput" value="{{city}}" />
+      </view>
+    </view>
+  </scroll-view>
+
+  <view class="button-container">
+    <button class="save-btn" bindtap="onSave">Save</button>
+  </view>
+</view>
