@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="login-box">
+    <image class="logo" src="/images/logo.png" mode="aspectFit"></image>
+    <text class="title">Welcome to Our App</text>
+    <text class="subtitle">Please log in to continue</text>
+    <button class="login-btn" bindtap="getUserProfile">
+      <image class="wechat-icon" src="/images/wechat-icon.png" mode="aspectFit"></image>
+      Login with WeChat
+    </button>
+  </view>
+</view>

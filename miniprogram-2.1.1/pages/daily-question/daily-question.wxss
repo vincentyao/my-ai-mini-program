@@ -1,0 +1,80 @@
+.container {
+  padding: 20px;
+  background-color: #f9f9f9;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.question {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+}
+
+.option {
+  padding: 12px;
+  margin-bottom: 10px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.option.selected {
+  background-color: #e0f2e9;
+  border: 2px solid #4CAF50;
+}
+
+.explanation {
+  margin-top: 20px;
+  padding: 15px;
+  background-color: #e8f5e9;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #333;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.button-group {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;  /* Center-align the buttons */
+}
+
+.action-button {
+  width: 110%;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.action-button.wide {
+  width: 110%;  /* Make the button wider */
+  font-size: 18px;
+  padding: 14px 0;
+}
+
+.action-button:active {
+  opacity: 0.8;
+}
+
+.loading {
+  text-align: center;
+  margin: 20px 0;
+  font-size: 16px;
+  color: #666;
+}
